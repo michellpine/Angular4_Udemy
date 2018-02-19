@@ -8,15 +8,19 @@ import { CoursesService } from '../course/courses.service';
     selector: 'app-courses',
     template: `
             <h2>{{ title }}</h2>
-            <ul>
-                <li *ngFor="let course of courses">
-                    {{ course }}
-                </li>
-            </ul>`
+            <img [src]="" />
+            <table>
+                <tr>
+                    <td [attr.colspan]="colSpan"></td>
+                </tr>
+            </table>
+            `
 })
 
 export class CoursesComponent {
     title = 'List of courses';
+    colSpan = 2;
+    imageUrl = '';
     courses;
 
     constructor(service: CoursesService) {
