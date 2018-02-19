@@ -7,13 +7,7 @@ import { CoursesService } from '../course/courses.service';
     // <div id="courses"> '#courses'
     selector: 'app-courses',
     template: `
-            <h2>{{ title }}</h2>
-            <img [src]="" />
-            <table>
-                <tr>
-                    <td [attr.colspan]="colSpan"></td>
-                </tr>
-            </table>
+            <button class="btn btn-primary">Save</button>
             `
 })
 
