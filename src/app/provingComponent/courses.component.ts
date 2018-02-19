@@ -4,7 +4,9 @@ import { CoursesService } from '../course/courses.service';
 @Component({
     selector: 'app-courses',
     template: `
-    {{ text | summary }}
+        <div>
+        <span class="glyphicon glyphicon-star"></span>
+        </div>
     `
 })
 
