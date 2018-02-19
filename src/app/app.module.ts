@@ -9,8 +9,9 @@ import { CourseComponent } from './course/course.component';
 import { CoursesService } from './course/courses.service';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorsService } from './authors/authors.service';
-import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { SummaryPipe } from './provingComponent/summary.pipe';
+import { PanelComponent } from './panel/panel.component';
 
 // Convierte un clase de TypeScript a Angular
 @NgModule({
@@ -20,7 +21,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     CourseComponent,
     AuthorsComponent,
     SummaryPipe,
-    FavoriteComponent
+    FavoriteComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
