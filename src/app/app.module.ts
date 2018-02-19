@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CoursesComponents } from './provingComponent/courses.component';
 import { CourseComponent } from './course/course.component';
+import { CoursesService } from './course/courses.service';
 
 // Convierte un clase de TypeScript a Angular
 @NgModule({
@@ -19,7 +20,11 @@ import { CourseComponent } from './course/course.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  // register all dependencies that components
+  // in this module are dependent
+  providers: [
+    CoursesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
