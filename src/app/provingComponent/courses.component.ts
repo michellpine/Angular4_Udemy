@@ -7,18 +7,21 @@ import { CoursesService } from '../course/courses.service';
     // <div id="courses"> '#courses'
     selector: 'app-courses',
     template: `
-            <!--
+            <!-- 
             old way
-            <input (keyup)="onKepUp($event)" />
+            <input (keyup.enter)="onKepUp($event)" />
             -->
-            <!-- event filtering -->
-            <input (keyup.enter)="onKepUp()" />
+            <input #email (keyup.enter)="onKepUp(email.value)" />
             `
 })
 
 export class CoursesComponent {
-    onKepUp() {
-        console.log("Enter was presed");
+    // old way
+    // onKepUp($event) {
+    //    console.log($event.target.value);
+    // }
+    onKepUp(email) {
+            console.log(email);
     }
 }
 
