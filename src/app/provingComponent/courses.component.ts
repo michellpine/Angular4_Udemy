@@ -7,18 +7,18 @@ import { CoursesService } from '../course/courses.service';
     // <div id="courses"> '#courses'
     selector: 'app-courses',
     template: `
-            <div (click)="onDivClicked($event)">
-                <button (click)="onSave($event)">Save</button>
-            </div>
+            <!--
+            old way
+            <input (keyup)="onKepUp($event)" />
+            -->
+            <!-- event filtering -->
+            <input (keyup.enter)="onKepUp()" />
             `
 })
 
 export class CoursesComponent {
-    onDivClicked(){
-        console.log("Div was clicked");
-    }
-    onSave($event) {
-        $event.stopPropagation();
-        console.log('Button was clicked', $event);
+    onKepUp() {
+        console.log("Enter was presed");
     }
 }
+
