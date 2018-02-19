@@ -1,0 +1,10 @@
+<!--<div (click)="onFavClicked($event)">
+    <span class="glyphicon glyphicon-{{isFavorite ? 'star' : 'star-empty'}}"></span> 
+</div>-->
+
+<span 
+class="glyphicon"
+[class.glyphicon-star]="isFavorite"
+[class.glyphicon-star-empty]="!isFavorite"
+(click)="onClick()"
+></span>
