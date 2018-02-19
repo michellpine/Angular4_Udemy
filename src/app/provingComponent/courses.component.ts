@@ -7,18 +7,10 @@ import { CoursesService } from '../course/courses.service';
     // <div id="courses"> '#courses'
     selector: 'app-courses',
     template: `
-            <button class="btn btn-primary">Save</button>
+            <button class="btn btn-primary" [class.active]="isActive">Save</button>
             `
 })
 
 export class CoursesComponent {
-    title = 'List of courses';
-    colSpan = 2;
-    imageUrl = '';
-    courses;
-
-    constructor(service: CoursesService) {
-        this.courses = service.getCourses();
-    }
-
+    isActive = false;
 }
