@@ -7,10 +7,10 @@ import { CoursesService } from '../course/courses.service';
     // <div id="courses"> '#courses'
     selector: 'app-courses',
     template: `
-            <button class="btn btn-primary" [class.active]="isActive">Save</button>
+            <button [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
             `
 })
 
 export class CoursesComponent {
-    isActive = false;
+    isActive = true;
 }
