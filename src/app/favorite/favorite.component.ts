@@ -1,22 +1,26 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-favorite',
   templateUrl: './favorite.component.html',
+  styles: [
+    `
+    .glyphicon {
+        color: green;
+    }
+    `
+  ],
   styleUrls: ['./favorite.component.css']
+
 })
-export class FavoriteComponent implements OnInit {
+export class FavoriteComponent {
 
   @Input('isFavorite') isSelected: boolean;
-  @Output() change = new EventEmitter();
-  constructor() { }
+  @Output('change') click = new EventEmitter();
 
-  ngOnInit() {
-  }
-
-  onClick(){
+  onClick() {
     this.isSelected = !this.isSelected;
-    this.change.emit({newValue: this.isSelected });
+    this.click.emit({newValue: this.isSelected });
   }
 }
 
