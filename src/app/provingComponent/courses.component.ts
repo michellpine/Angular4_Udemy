@@ -15,7 +15,7 @@ import { CoursesService } from '../course/courses.service';
             </ul>`
 })
 
-export class CoursesComponents {
+export class CoursesComponent {
     title = 'List of courses';
     courses;
 

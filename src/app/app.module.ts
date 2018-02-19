@@ -4,16 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { CoursesComponents } from './provingComponent/courses.component';
+import { CoursesComponent } from './provingComponent/courses.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesService } from './course/courses.service';
+import { AuthorsComponent } from './authors/authors.component';
+import { AuthorsService } from './authors/authors.service';
 
 // Convierte un clase de TypeScript a Angular
 @NgModule({
   declarations: [
     AppComponent,
-    CoursesComponents,
-    CourseComponent
+    CoursesComponent,
+    CourseComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import { CoursesService } from './course/courses.service';
   // register all dependencies that components
   // in this module are dependent
   providers: [
-    CoursesService
+    CoursesService,
+    AuthorsService
   ],
   bootstrap: [AppComponent]
 })
