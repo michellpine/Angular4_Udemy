@@ -22,6 +22,13 @@ export class AppComponent {
   viewMode = 'a';
   canSave = true;
 
+  task = {
+    title: 'Review applications',
+    assignee: null
+    /*{
+      name: 'John Smith'
+    }*/
+  };
   onAdd() {
     this.courses.push({ id: 4, name: 'course4' });
   }
@@ -46,5 +53,7 @@ export class AppComponent {
   trackCourse(index, subject) {
     return subject ? subject.id : undefined;
   }
+
+  
 }
 
