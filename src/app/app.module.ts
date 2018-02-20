@@ -12,6 +12,8 @@ import { LikeComponent } from './like/like.component';
 import { CoursesComponent } from './courses/courses.component';
 import { SummaryPipe } from './courses/summary.pipe';
 import { CoursesService } from './courses/courses.service';
+import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 // Convierte un clase de TypeScript a Angular
 @NgModule({
@@ -22,7 +24,9 @@ import { CoursesService } from './courses/courses.service';
     SummaryPipe,
     FavoriteComponent,
     PanelComponent,
-    LikeComponent
+    LikeComponent,
+    InputFormatDirective,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,

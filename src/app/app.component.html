@@ -79,6 +79,18 @@
 >Save
 </button>
 
-<hr />
+<!--validar sin error campos nulos-->
 <span>{{ task.assignee?.name }}</span>
 
+
+<hr />
+<input type="text" [appInputFormat]="'uppercase'">
+
+<hr />
+<app-zippy title="Shipping Details">
+    Shipping Details Content
+</app-zippy>
+<br />
+<app-zippy title="Biling Details">
+    Billing Details Content
+</app-zippy>
