@@ -12,6 +12,7 @@ import { AuthorsService } from './authors/authors.service';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { SummaryPipe } from './provingComponent/summary.pipe';
 import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 // Convierte un clase de TypeScript a Angular
 @NgModule({
@@ -22,7 +23,8 @@ import { PanelComponent } from './panel/panel.component';
     AuthorsComponent,
     SummaryPipe,
     FavoriteComponent,
-    PanelComponent
+    PanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
