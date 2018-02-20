@@ -4,22 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { CoursesComponent } from './provingComponent/courses.component';
-import { CourseComponent } from './course/course.component';
-import { CoursesService } from './course/courses.service';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorsService } from './authors/authors.service';
 import { FavoriteComponent } from './favorite/favorite.component';
-import { SummaryPipe } from './provingComponent/summary.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
+import { CoursesComponent } from './courses/courses.component';
+import { SummaryPipe } from './courses/summary.pipe';
+import { CoursesService } from './courses/courses.service';
 
 // Convierte un clase de TypeScript a Angular
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    CourseComponent,
     AuthorsComponent,
     SummaryPipe,
     FavoriteComponent,
