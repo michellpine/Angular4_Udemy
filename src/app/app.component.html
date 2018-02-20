@@ -7,18 +7,11 @@
 </bootstrap-panel> 
 
 <hr />
-<div [hidden]="courses.length == 0">
-    List of courses
-</div>
-<div [hidden]="courses.length > 0">
-    No courses yet
-</div>
-
-<hr />
 <app-like
     [likesCount]="tweet.likesCount"
     [isActive]="tweet.isLiked">
 </app-like>
+<hr />
 
 <hr />
 <ul class="nav nav-pills">
@@ -32,7 +25,15 @@
     <div *ngSwitchDefault>Otherwise</div>
 </div>
 
+
 <hr />
+<div [hidden]="courses.length == 0">
+    List of courses {{ courses.length }}
+</div>
+<div [hidden]="courses.length > 0">
+    No courses yet
+</div>
+
  <!--<ul>
    <li *ngFor="let course of courses; index as i">
         {{ i }} - {{ course.name }}
@@ -41,12 +42,20 @@
         {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
         </li>
 </ul>-->
-
+<hr />
 <button (click)="onAdd()">Add</button>
 <ul>
     <li *ngFor="let course of courses">
         {{ course.name }}
         <button (click)="onRemove(course)">Remove</button>
         <button (click)="onChange(course)">Change</button>
+    </li>
+</ul>
+
+<hr />
+<button (click)="loadSubjects()">Load Subjects</button>
+<ul>
+    <li *ngFor="let subject of subjects; trackBy: trackCourse">
+        {{ subject.name }}
     </li>
 </ul>

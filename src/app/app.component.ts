@@ -18,7 +18,7 @@ export class AppComponent {
     { id: 2, name: 'course2'},
     { id: 3, name: 'course3'},
   ];
-
+  subjects;
   viewMode = 'a';
 
   onAdd() {
@@ -32,6 +32,18 @@ export class AppComponent {
 
   onChange(course) {
     course.name = 'Updated';
+  }
+
+  loadSubjects() {
+    this.subjects = [
+      { id: 1, name: 'subject1' },
+      { id: 2, name: 'subject2' },
+      { id: 3, name: 'subject3' }
+    ];
+  }
+
+  trackCourse(index, subject) {
+    return subject ? subject.id : undefined;
   }
 }
 
