@@ -13,8 +13,12 @@ export class AppComponent {
     isLiked: false,
     likesCount: 0
   };
-  courses = [2];
+  courses = [
+    { id: 1, name: 'course1'},
+    { id: 2, name: 'course2'},
+    { id: 3, name: 'course3'},
+  ];
 
-  viewMode = 'something';
+  viewMode = 'a';
 }
 

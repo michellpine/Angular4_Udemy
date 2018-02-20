@@ -31,3 +31,13 @@
     <div *ngSwitchCase="'list'">List View Content</div>
     <div *ngSwitchDefault>Otherwise</div>
 </div>
+
+<hr />
+<ul>
+    <!--<li *ngFor="let course of courses; index as i">
+        {{ i }} - {{ course.name }}
+    </li>-->
+    <li *ngFor="let course of courses; even as isEven">
+        {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
+        </li>
+</ul>
