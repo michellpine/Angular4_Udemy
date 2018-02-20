@@ -53,7 +53,5 @@ export class AppComponent {
   trackCourse(index, subject) {
     return subject ? subject.id : undefined;
   }
-
-  
 }
 
