@@ -33,11 +33,20 @@
 </div>
 
 <hr />
-<ul>
-    <!--<li *ngFor="let course of courses; index as i">
+ <!--<ul>
+   <li *ngFor="let course of courses; index as i">
         {{ i }} - {{ course.name }}
-    </li>-->
+    </li>
     <li *ngFor="let course of courses; even as isEven">
         {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
         </li>
+</ul>-->
+
+<button (click)="onAdd()">Add</button>
+<ul>
+    <li *ngFor="let course of courses">
+        {{ course.name }}
+        <button (click)="onRemove(course)">Remove</button>
+        <button (click)="onChange(course)">Change</button>
+    </li>
 </ul>
