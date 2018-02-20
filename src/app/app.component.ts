@@ -20,6 +20,7 @@ export class AppComponent {
   ];
   subjects;
   viewMode = 'a';
+  canSave = true;
 
   onAdd() {
     this.courses.push({ id: 4, name: 'course4' });
