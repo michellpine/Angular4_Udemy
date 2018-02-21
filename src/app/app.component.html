@@ -14,7 +14,6 @@
     [likesCount]="tweet.likesCount"
     [isActive]="tweet.isLiked">
 </app-like>
-<hr />
 
 <hr />
 <ul class="nav nav-pills">
@@ -46,17 +45,17 @@
         </li>
 </ul>-->
 <hr />
-<button (click)="onAdd()">Add</button>
+<button class="btn btn-primary" (click)="onAdd()">Add</button>
 <ul>
     <li *ngFor="let course of courses">
         {{ course.name }}
-        <button (click)="onRemove(course)">Remove</button>
-        <button (click)="onChange(course)">Change</button>
+        <button class="btn btn-primary" (click)="onRemove(course)"> Remove </button>
+        <button class="btn btn-primary" (click)="onChange(course)"> Change </button>
     </li>
 </ul>
 
 <hr />
-<button (click)="loadSubjects()">Load Subjects</button>
+<button class="btn btn-primary" (click)="loadSubjects()">Load Subjects</button>
 <ul>
     <li *ngFor="let subject of subjects; trackBy: trackCourse">
         {{ subject.name }}
@@ -71,7 +70,8 @@
 >Save
 </button>
 -->
-<button
+<button 
+    class="btn btn-primary"
     [ngStyle]="{
         'backgroundColor': canSave ? 'deeppink': 'gray',
         'color': canSave ? 'white': 'black'
@@ -94,3 +94,6 @@
 <app-zippy title="Biling Details">
     Billing Details Content
 </app-zippy>
+
+<hr />
+<signup-form></signup-form>

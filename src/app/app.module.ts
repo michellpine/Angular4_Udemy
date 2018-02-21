@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { SummaryPipe } from './courses/summary.pipe';
 import { CoursesService } from './courses/courses.service';
 import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from './zippy/zippy.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 // Convierte un clase de TypeScript a Angular
 @NgModule({
@@ -26,12 +27,14 @@ import { ZippyComponent } from './zippy/zippy.component';
     PanelComponent,
     LikeComponent,
     InputFormatDirective,
-    ZippyComponent
+    ZippyComponent,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   // register all dependencies that components
   // in this module are dependent
