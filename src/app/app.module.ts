@@ -5,18 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { InputFormatDirective } from './input-format.directive';
-import { SignupFormComponent } from './signup-form/signup-form.component';
-import { NewCourseComponent } from './new-course/new-course.component';
-import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PostComponent } from './post/post.component';
 
 // Convierte un clase de TypeScript a Angular
 @NgModule({
   declarations: [
     AppComponent,
     InputFormatDirective,
-    SignupFormComponent,
-    NewCourseComponent,
-    ChangePasswordComponent
+    PostComponent
   ],
   imports: [
     BrowserModule,
