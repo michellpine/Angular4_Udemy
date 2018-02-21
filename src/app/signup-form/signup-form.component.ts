@@ -8,13 +8,16 @@ import { UsernameValidators } from './username.validators';
   styleUrls: ['./signup-form.component.css']
 })
 export class SignupFormComponent {
+
   form = new FormGroup({
     username: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
       UsernameValidators.cannotContainSpace
-    ]),
-    password: new FormControl('',Validators.required)
+    ],
+    // async validators
+    UsernameValidators.shouldBeUnique),
+    password: new FormControl('', Validators.required)
   });
 
   get username () {
