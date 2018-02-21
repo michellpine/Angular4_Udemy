@@ -48,7 +48,7 @@
 <button class="btn btn-primary" (click)="onAdd()">Add</button>
 <ul>
     <li *ngFor="let course of courses">
-        {{ course.name }}
+        <h4>{{ course.name }}</h4>
         <button class="btn btn-primary" (click)="onRemove(course)"> Remove </button>
         <button class="btn btn-primary" (click)="onChange(course)"> Change </button>
     </li>
@@ -99,4 +99,8 @@
 <signup-form></signup-form>
 
 <hr />
+<h4>Add New Topic</h4>
 <app-new-course></app-new-course>
+
+<hr />
+<app-change-password></app-change-password>
